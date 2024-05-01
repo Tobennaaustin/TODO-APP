@@ -31,5 +31,5 @@ function deleteTask(event) {
     const li = event.target.parentElement;
     console.log(li); // Check if the correct parent element is selected
     console.log(taskList); // Check the taskList element
-    taskList.removeChild(li);
+    taskList.remove(li);
 }
