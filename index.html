@@ -31,10 +31,30 @@
     </section>
 
     <section id="second-section">
+        <!-- Button to open add task form -->
         <div class="addbtn">
-            <button onclick="myFunction()">&plus;</button>
+            <button id="myBtn">&plus;</button>
         </div>
+        <!-- Add task modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h1>Add a task</h1>
+                <div class="form">
+                    <input type="text" id="taskInput" placeholder="Add a new task...">
+                <input type="date"  id="dateTimeInput">
+                <button id="addTaskBtn">Add</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- snackbar code -->
         <div id="snackbar">Coming soon..</div>
+
+        <!-- navigation bar code -->
         <nav class="navbar">
             <div class="logo_item">
                 <i class="bx bx-menu" id="sidebarOpen"></i>
@@ -64,7 +84,7 @@
                             <span class="navlink_icon">
                                 <i class="bx bx-home-alt"></i>
                             </span>
-                            <span class="navlink" >Home</span>
+                            <span class="navlink">Home</span>
                             <!-- <i class="bx bx-chevron-right arrow-left"></i> -->
                         </div>
 
@@ -107,7 +127,7 @@
                             <span class="navlink_icon">
                                 <i class='bx bx-list-ol'></i>
                             </span>
-                            <span class="navlink" >My lists</span>
+                            <span class="navlink">My lists</span>
                         </a>
                     </li>
                     <!-- End -->
@@ -187,12 +207,11 @@
             </div>
         </nav>
 
+        <!-- main content -->
         <main>
-            <div class="welcome-txt">
-                <h1>Add your tasks</h1>
-            </div>
             <div class="list">
-                <ul id="taskList"></ul>
+                <h2 style="margin-left: 10px; margin-top: 20px;">My Lists</h2>
+                <ul id="taskList"></ul> 
             </div>
         </main>
     </section>
