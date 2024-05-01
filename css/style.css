@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+html{ scroll-behavior: smooth; }
+
+body{transition: all 0.5s ease;}
+
+#first-section{ margin: 20px; height: 70vh; display: flex; align-items: center; justify-content: center;}
+
+#first-section .container{ display: grid; place-items: center;}
+
+.container span{ background-color: #6C63FF; color: white; padding: 10px;  font-size: 2.5em; font-weight: 900; width: 60px; height: 60px; text-align: center; border-radius: 9px; margin-bottom: 50px; display: flex; align-items: center; justify-content: center;} 
+
+.container .container-txt{display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center; margin-bottom: 50px;}
+
+.container .container-txt h2{font-weight: 100; margin-bottom: 10px; font-size: 25px;}
+
+.container .container-txt h1{font-weight: bold; font-size: 20px; margin-bottom: 10px;}
+
+.container .container-txt p{color: rgba(0, 0, 0, 0.637); max-width: 90%;}
+
+.container .container-btn{display: flex; flex-direction: column; gap: 30px;}
+
+.container-btn button{padding: 15px; background-color: color-mix(in srgb, blue 30%, white 70%); outline: none; border: none; border-radius: 5px; width: 110px; color: blue; cursor: pointer;}
+
+.container-btn button:nth-of-type(2){background: none;}
