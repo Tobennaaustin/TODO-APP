@@ -1,35 +1,23 @@
-const taskInput = document.getElementById('taskInput');
-const dateTimeInput = document.getElementById('dateTimeInput');
-const addTaskBtn = document.getElementById('addTaskBtn');
-const taskList = document.getElementById('taskList');
+const form = document.querySelector('form');
+const ul = document.getElementById('taskList');
 
 
-addTaskBtn.addEventListener('click', addTask);
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    const modal = document.getElementById('myModal');
+    const taskInput = form.querySelector('#taskInput');
+    const dateInput = form.querySelector('#dateTimeInput');
 
-function addTask() {
-    const taskText = taskInput.value.trim();
-    const taskDateTime = dateTimeInput.value;
+    modal.style.display = "none";
 
-    if (taskText !== '') {
-        const li = document.createElement('li');
-        li.innerHTML = `
-            <span>${taskText}</span>
-            <span>${taskDateTime}</span>
-            <button class="deleteBtn"><i class='bx bxs-trash'></i></button>
-        `;
-        taskList.appendChild(li);
-        taskInput.value = '';
-        dateTimeInput.value = '';
+    const html = `<li>
+       <span>${taskInput.value}</span>
+       <span>${dateTimeInput.value}</span>
+       <button onclick=(removeLi(this)) class="deleteBtn"><i class='bx bxs-trash'></i></button>
+    </li>`
+    ul.innerHTML += html
+});
 
-        const deleteBtn = li.querySelector('.deleteBtn');
-        deleteBtn.addEventListener('click', deleteTask);
-        deleteBtn.style
-    }
-}
-
-function deleteTask(event) {
-    const li = event.target.parentElement;
-    console.log(li); // Check if the correct parent element is selected
-    console.log(taskList); // Check the taskList element
-    taskList.remove(li);
+function removeLi(e){
+    e.parentElement.remove()
 }

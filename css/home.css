@@ -450,12 +450,24 @@ main {
 }
 
 /* Modal Content */
+@keyframes close-modal{
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+   
+}
+
 .modal-content {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    border-radius: 5px;
 }
 
 .modal-content .form {
@@ -466,7 +478,14 @@ main {
 
 .modal-content .form input {
     padding: 10px;
-
+    border: 2px solid black;
+    width: 100%;
+}
+.modal-content .form button{
+    padding: 10px;
+    border: none;
+    color: white;
+    background-color: #191970;
 }
 
 /* The Close Button */
@@ -511,4 +530,8 @@ main {
 }
 #taskList .deleteBtn:hover{
     color: red;
+}
+#tasklist li{
+    overflow-x: scroll;
+    width: 10px;
 }
