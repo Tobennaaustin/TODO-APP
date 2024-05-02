@@ -26,6 +26,9 @@ form.addEventListener('submit', e => {
     taskCount++; // Increment task count
     updateTaskCount(); // Update task count display
 
+    // Reset the form after submission to clear input fields
+    form.reset();
+
     setTimeout(() => {
         modal.style.display = 'none';
         modal.classList.remove('close-modal'); // Remove the fadeout class for subsequent modals
