@@ -32,7 +32,7 @@ form.addEventListener('submit', e => {
     setTimeout(() => {
         modal.style.display = 'none';
         modal.classList.add('close-modal'); // Remove the fadeout class for subsequent modals
-    }, 1000);
+    }, 3000);
 });
 
 function removeLi(e) {
