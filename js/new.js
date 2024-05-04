@@ -31,7 +31,7 @@ form.addEventListener('submit', e => {
 
     setTimeout(() => {
         modal.style.display = 'none';
-        modal.classList.remove('close-modal'); // Remove the fadeout class for subsequent modals
+        modal.classList.add('close-modal'); // Remove the fadeout class for subsequent modals
     }, 1000);
 });
 
