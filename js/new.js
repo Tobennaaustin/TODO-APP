@@ -19,8 +19,8 @@ form.addEventListener('submit', e => {
     const html = `<li>
        <span>${taskInput.value}</span>
        <span>${dateTimeInput.value}</span>
-       <button onclick="removeLi(this)" class="deleteBtn"><i class='bx bxs-trash'></i></button>
-    </li>`;
+       <button onclick="removeLi(this)" class="deleteBtn"><i class='bx bxs-trash'></i></button> </li>`;
+       
     ul.innerHTML += html;
 
     taskCount++; // Increment task count

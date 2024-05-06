@@ -205,7 +205,7 @@ body.dark {
     display: none;
 }
 
-.nav_link:hover {
+.nav_link:hover, a:hover {
     color: var(--white-color);
     background: var(--blue-color);
 }
